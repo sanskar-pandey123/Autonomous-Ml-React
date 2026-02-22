@@ -1,0 +1,269 @@
+.dashboard-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background: #0f172a;
+  color: white;
+  margin-top: 80px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #020617;
+  padding: 30px 20px;
+  border-right: 1px solid rgba(0,255,255,0.2);
+}
+
+.logo {
+  color: #00ffff;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar li:hover {
+  color: #00ffff;
+}
+
+/* Main */
+.main-content {
+  flex: 1;
+  padding: 40px;
+}
+
+.dashboard-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #00ffff;
+}
+
+/* Stats */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: rgba(15, 23, 42, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(0,255,255,0.2);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0,255,255,0.3);
+}
+
+.stat-card p {
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+.danger-card {
+  border-color: #ef4444;
+}
+
+.safe-card {
+  border-color: #22c55e;
+}
+
+/* Alerts */
+.alerts-section {
+  margin-bottom: 15px;
+}
+
+.alert-box {
+  margin-top: 20px;
+  background: rgba(239, 68, 68, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #ef4444;
+}
+
+/* AI */
+.ai-section {
+  margin-bottom: 30px;
+  background: rgba(0,255,255,0.1);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+/* Table */
+.table-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-section th, .table-section td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  text-align: left;
+}
+
+.danger-text {
+  color: #ef4444;
+}
+
+.safe-text {
+  color: #22c55e;
+}
+
+/* Sidebar Links */
+.sidebar ul li a {
+  text-decoration: none;  
+  color: white;           
+  display: block;
+  transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.sidebar ul li a:hover {
+  color: #22d3ee;       
+}
+
+
+.sidebar ul li a.active {
+  color: #22d3ee;
+  font-weight: 600;
+}
+
+/* Dashboard-specific styles */
+
+/* SETTINGS SECTION */
+.settings-section {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* CENTER EVERYTHING */
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Title Center */
+.settings-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;       /* CENTER TEXT */
+  background: linear-gradient(90deg, #ff0000, #ff4d4d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Card */
+.settings-card {
+  width: 100%;
+  max-width: 600px;         /* FIXED WIDTH CENTER */
+  background: rgba(255, 255, 255, 0.03);
+  padding: 22px 25px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 0, 0, 0.15);
+  transition: 0.3s ease;
+  text-align: left;         /* CONTENT LEFT ALIGNED INSIDE */
+}
+
+.settings-card:hover {
+  border-color: rgba(255, 0, 0, 0.35);
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.08);
+}
+
+.settings-card h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* INPUTS */
+.settings-card input[type="text"],
+.settings-card input[type="email"],
+.dropdown {
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #111;
+  color: #fff;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.settings-card input:focus,
+.dropdown:focus {
+  outline: none;
+  border-color: red;
+  box-shadow: 0 0 6px rgba(255, 0, 0, 0.4);
+}
+
+/* CHECKBOX */
+.settings-card label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #ccc;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.settings-card input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  accent-color: red;
+}
+
+
+/* BUTTONS */
+.save-btn,
+.clear-btn,
+.reset-btn {
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.save-btn {
+  background: linear-gradient(90deg, #ff0000, #cc0000);
+  color: white;
+}
+
+.clear-btn {
+  background: #ff2e2e;
+  color: white;
+  margin-right: 10px;
+}
+
+.reset-btn {
+  background: #800000;
+  color: white;
+}
+
+.danger-zone {
+  border: 1px solid rgba(255, 0, 0, 0.3);
+}
+
+/* Smooth fade */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}

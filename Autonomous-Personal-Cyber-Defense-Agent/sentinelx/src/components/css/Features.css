@@ -1,0 +1,118 @@
+.features {
+  position: relative;
+  padding: 40px 80px;
+  background: radial-gradient(circle at center, #0f0f0f, #000000 80%);
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Subtle animated background lines */
+.features::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(255,0,0,0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,0,0,0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: moveLines 25s linear infinite;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+@keyframes moveLines {
+  from { transform: translateY(0); }
+  to { transform: translateY(60px); }
+}
+
+/* Header */
+.features-header {
+  position: relative;
+  z-index: 2;
+  max-width: 750px;
+  margin: auto;
+}
+
+.features-header h2 {
+  font-size: 42px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ff0000, #ff4d4d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.features-header p {
+  color: #aaa;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 80px;
+}
+
+/* Grid */
+.features-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Card */
+.feature-card {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 50px 35px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 0, 0, 0.15);
+  backdrop-filter: blur(8px);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Hover effect */
+.feature-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(255, 0, 0, 0.5);
+  box-shadow: 0 15px 40px rgba(255, 0, 0, 0.2);
+}
+
+/* Icon */
+.feature-icon {
+  font-size: 40px;
+  margin-bottom: 25px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.2);
+}
+
+/* Title */
+.feature-card h3 {
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+/* Description */
+.feature-card p {
+  color: #bbb;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .features {
+    padding: 80px 20px;
+  }
+
+  .features-header h2 {
+    font-size: 30px;
+  }
+}
